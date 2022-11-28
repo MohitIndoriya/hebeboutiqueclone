@@ -7,11 +7,11 @@
     background-size: cover;
 }
 .hero-text{
-        
+        font-weight: bold;
 }
 .about-section{
     padding: 100px;
 }
 .brand-section{
-    
+    font-size: normal;
 }
