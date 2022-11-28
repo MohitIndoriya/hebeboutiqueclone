@@ -1,0 +1,17 @@
+.hero-section{
+    background-image: url('https://cdn.shopify.com/s/files/1/1132/3440/files/KATE7833_3024x.jpg');
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-position: center center;
+    background-size: cover;
+}
+.hero-text{
+        
+}
+.about-section{
+    padding: 100px;
+}
+.brand-section{
+    
+}
