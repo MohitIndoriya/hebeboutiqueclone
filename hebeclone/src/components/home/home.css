@@ -1,7 +1,9 @@
 *{
     margin: 0px;
     padding: 0px;
-}.hero-section{
+    font-family: 'chloeregular', "ITC Novarese";
+}
+.hero-section{
     background-image: url('https://cdn.shopify.com/s/files/1/1132/3440/files/KATE7833_3024x.jpg');
     height: 100vh;
     margin: 0px;
@@ -97,10 +99,12 @@
 }
 .insta-section{
     padding:0px;
+    padding: 40px 0px 40px 0px;
     margin: 0px;
 }
 .insta-grid-container{
     display: flex;
+    margin-top: 40px;
 }
 .insta-grid{
     width: 20%;

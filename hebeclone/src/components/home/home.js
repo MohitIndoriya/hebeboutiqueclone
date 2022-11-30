@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './home.css';
 
 function Home(){
+    function App1() {
+        document.title = ' Hebe Boutique — Hebe Designer Boutique';
+        
+    }
     
     return (
         <div>
+            <App1/>
             <div className='hero-section'>
                 <div className='hero-text' >
                 <h1>Blak / Resort</h1>
