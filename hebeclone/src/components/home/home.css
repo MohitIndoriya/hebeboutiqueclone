@@ -1,4 +1,7 @@
-.hero-section{
+*{
+    margin: 0px;
+    padding: 0px;
+}.hero-section{
     background-image: url('https://cdn.shopify.com/s/files/1/1132/3440/files/KATE7833_3024x.jpg');
     height: 100vh;
     margin: 0px;
@@ -14,4 +17,113 @@
 }
 .brand-section{
     font-size: normal;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 40px;
+  background-color: #faf8f4;
+  padding: 0px 80px 80px 80px;
+}
+.grid-container > div {
+    /* border: 1px solid black; */
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+  }
+  .example-section{
+    padding: 100px;
+    background-color: #caafa8;
+    display: flex;
+  }
+  .example-photo, .example-text {
+    width: 50%;
+    text-align: left;
+  }
+  .example-photo svg {
+    fill: rgba(255, 255, 255, 0.35);
+    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    padding: 30px 0;
+}
+.homegrown-section{
+    padding: 80px 10px 80px 80px;
+    display: flex;
+    align-items: center;
+}
+.homegrown-text{
+    width: 40%;
+}
+.homegrown-image{
+    width:60%
+}
+.featured-section{
+    padding:20px;
+    display: flex;
+}
+.featured-grid{
+    width: 33.3%;
+    height: 450px;
+    margin: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+.featured-grid1{
+    background-image: url('https://cdn.shopify.com/s/files/1/1132/3440/files/E42EF769-D143-4A62-AC7E-03DC6C0FD999_1080x.jpg?v=1659413203');
+}
+.featured-grid2{
+    background-image: url('https://cdn.shopify.com/s/files/1/1132/3440/files/Saben_SS22__Odile2___Parchment__Drop_750x.jpg?v=1660712639');
+}
+.featured-grid3{
+    background-image: url('https://cdn.shopify.com/s/files/1/1132/3440/files/1B27F6D0-AD66-4A25-8981-F5CA22AE6D61_750x.jpg?v=1636621638');
+
+}
+.featured-title {
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.featured-title:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+    text-decoration: underline;
+}
+.insta-section{
+    padding:0px;
+    margin: 0px;
+}
+.insta-grid-container{
+    display: flex;
+}
+.insta-grid{
+    width: 20%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+}
+.insta-grid1{
+    background-image: url('https://scontent.cdninstagram.com/v/t51.29350-15/317323293_1217994238793773_7772088645906931100_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=rsZj8qbTbcIAX9DNV6P&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCqPoFDgiPVSKEfcfc1ShWNWKYXxFampoAqwt34HCXGxQ&oe=638CAB5E');
+}
+.insta-grid2{
+    background-image: url('https://scontent.cdninstagram.com/v/t51.29350-15/317562190_6411480612202374_5545118676606711872_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=TWirxc3Agn4AX_edDgJ&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfD_KHiDtlHDPwLScVZyiBQ3xfkdcq9D8dpjAIipcbgesA&oe=638B4D54');
+}
+.insta-grid3{
+    background-image: url('https://scontent.cdninstagram.com/v/t51.29350-15/317608776_813490869759275_4446840562824732493_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=yOCSChCJiDQAX81IfYO&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfDk_DGyHalSNjmDUDctLXVXFE0pP9-dmzjs_vvKG0oxlA&oe=638CAB27');
+}
+.insta-grid4{
+    background-image: url('https://scontent.cdninstagram.com/v/t51.29350-15/317303756_1160897781479988_5079210073081570589_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=Xg4jnCTCAXIAX91jcXo&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfCo2iF5MVzL_F2iYy_lv1u9yttN25I-Bnbbvy93mmYIgg&oe=638B8986');
+}
+.insta-grid5{
+    background-image: url('https://scontent.cdninstagram.com/v/t51.29350-15/317024639_878645026486195_4399981176068565333_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=8ae9d6&_nc_ohc=30OKILTkmFgAX87ek8x&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&oh=00_AfAvuHuoEYui_hmmgkjI3CzVRgCxfdIx2fZHc7aJTGfnfA&oe=638C5EC3');
+}
+.insta-title{
+    display: none;
 }
