@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
-    font-family: 'chloeregular', "ITC Novarese";
+    font-family: 'ITC Novarese' , Chloe;
+}
+p{
+    font-family: 'Montserrat', sans-serif;
 }
 .hero-section{
     background-image: url('https://cdn.shopify.com/s/files/1/1132/3440/files/KATE7833_3024x.jpg');
@@ -13,6 +18,7 @@
 }
 .hero-text{
         font-weight: bold;
+        font-family: 'chloe';
 }
 .about-section{
     padding: 100px;
