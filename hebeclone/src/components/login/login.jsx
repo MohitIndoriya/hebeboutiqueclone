@@ -2,25 +2,21 @@ import React,{useState} from 'react'
 import {Box,Input,Heading,Container,Button} from "@chakra-ui/react"
 import {Link} from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
-
+import axios from 'axios'
+import { Signin } from '../../actions/userActions'
 
 export default function Login() {
+  
     const [password,setPassword]=useState("")
     const [email,setEmail]=useState("")
-    const user=useSelector(store=>store.users)
+    const {isAuth}=useSelector((store)=>store.auth)
+    console.log(isAuth)
     const dispatch=useDispatch()
-    const handleSubmit=()=>{
-       
-       const payload= user.find(user=>user.email===email && user.password===password)
-       if(payload){
-        dispatch({
-            type:"LOGIN",
-            payload
-        })
-        alert("Login Succesfull")
-       }else{
-        alert("Wrong credential")
-       }
+    const  handleSubmit=async()=>{
+    dispatch(Signin({email,password}))
+    
+     
+
     }
   return (
     <Box bg="#caafa8">

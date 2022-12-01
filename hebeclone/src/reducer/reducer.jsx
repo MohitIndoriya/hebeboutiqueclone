@@ -1,35 +1,32 @@
-import { legacy_createStore } from "redux";
 
 let intial={
-    users: [{
-        id:"",
-    firstName: '',
-        lastName: '',
-        email: '',
-        password: ''
-      }],
-      loggedInuser:null,
+ isAuth:false,
+ islodding:false,
+ userName:"",
+ message:""
     
 }
-export const reducer=(store=intial,action)=>{
+export const reducer=(state=intial,action)=>{
     switch (action.type){
         case "REGISTER":
             return {
           
-            ...store,
-            users :[...store.users,action.payload]
+            ...state,message:"Account created"
           
  
         }
         case "LOGIN":
             return{
-                ...store,
-                users: action.payload
+                ...state,
+                isAuth:true,islodding:false,userName:action.payload
             }
-
+        case "LODING":return {
+            ...state,islodding:true
+        }
+        case "LOGOUT":return intial
         
         default :
-        return store;
+        return state;
         
     }
 

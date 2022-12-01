@@ -20,7 +20,6 @@ export default function Signup() {
 
     // reset login status
     let navigate=useNavigate();
-    const users=useSelector(store=>store.users)
    
    let user={
      firstName,
@@ -41,13 +40,7 @@ export default function Signup() {
         await axios.post("http://localhost:8080/users",user)
         dispatch({
             type :"REGISTER",
-            payload:{
-                id:(new Date).getTime(),
-                firstName: firstName,
-                lastName: lastName,
-                email: email,
-                password: password
-            }
+            payload:"user registerd"
         })
                alert("user added")
                navigate("/")
@@ -60,7 +53,6 @@ export default function Signup() {
    
 
     }
-    console.log(users);
   return (
     <Box bg="#caafa8">
         

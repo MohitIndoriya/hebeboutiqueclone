@@ -6,7 +6,27 @@
       "lastName": " ",
       "email": " ",
       "password": " "
+    },
+    {
+      "firstName": "mohit",
+      "lastName": "indoriya",
+      "email": "mkibap@gmail.com",
+      "password": "mohit",
+      "id": 2
+    },
+    {
+      "firstName": "mohit",
+      "lastName": "indoriya",
+      "email": "mkibap@gmail",
+      "password": "titu",
+      "id": 3
+    },
+    {
+      "firstName": "mohit kumar",
+      "lastName": "indoriya",
+      "email": "titu@gmail.com",
+      "password": "titu",
+      "id": 4
     }
-   
   ]
 }
