@@ -1,6 +1,7 @@
 // import { StyleSheet, Text, View } from 'react-native'
 import React from "react";
 import "./Product.css";
+// import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 
 export default function Product() {
   let productArray = [
@@ -65,30 +66,53 @@ export default function Product() {
     <div className="container">
       <div id="top">
         <div id="topLeft">
-          <h2>Product Detail Page</h2>
+          {/* <h2>Product Detail Page</h2> */}
           {
             <img
-              src={productArray[0].image}
+              src={productArray[3].image}
               alt="pic"
-              height="600"
-              width="450"
+              height="750"
+              width="540"
+              // paddingTop="400px"
+              margin="auto"
+              // borderRadius="10px"
             />
           }
         </div>
         <div id="topRight">
-          <h4>{productArray[0].category}</h4>
+          <div>{productArray[0].category}</div>
           <h1>{productArray[0].title}</h1>
-          <p>
-            <span style={{ color: "red" }}>${productArray[0].price}</span>
-            or 6 weekly interest-free payments from $13.32 with Laybuy
-          </p>
-          <h5>
-            `or ${productArray[0].rating.rate} interest-free payment of $ $
+          <div>
+            <span style={{}}>${productArray[0].price + "  "}</span>
+            <br />
+            <span>
+              or 6 weekly interest-free payments from $13.32 with Laybuy
+            </span>
+          </div>
+          <div>
+            or ${productArray[0].rating.rate} interest-free payment of $ $
             {productArray[0].rating.count % 7}` with <span>afterPay</span>
-          </h5>
+          </div>
+          <div>Tax Included</div>
+          <div>{productArray[0].rating.count} in Stock</div>
+          <div>
+            <p>Size</p>
+            <button>S</button>
+            <button>M</button>
+            <button>L</button>
+          </div>
+          <button id="addToCart">Add to cart</button>
+          <button id="buyBtn">Buy with </button>
+          <a href="/Product.js">More payment options</a>
+          <div
+            style={{ border: "2px solid teal", height: "300", width: "500" }}
+          ></div>
         </div>
       </div>
-      <div id="bottom">div3</div>
+      <div id="bottom">
+        <div id="topBottom">You may also like</div>
+        <div id="downBottom">downBottom</div>
+      </div>
     </div>
     // <View>
     //   <Text>Product</Text>

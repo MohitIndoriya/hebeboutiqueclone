@@ -1,11 +1,15 @@
 // import logo from './logo.svg';
 import "./App.css";
 import Product from "./components/Product Page/Product";
+// import { ChakraProvider } from "@chakra-ui/react";
+// import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
     <div className="App">
+      {/* <ChakraProvider> */}
       <Product />
+      {/* </ChakraProvider> */}
       {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
