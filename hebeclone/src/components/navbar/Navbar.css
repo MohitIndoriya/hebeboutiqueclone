@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.parent{
+width: 100%;
+background-color: #CAAFA8;
+height: 90px;
+display: flex;
+justify-content: space-evenly;
+}
+
+.menu{
+  display: flex;
+  gap: 22px;
+  margin: auto;
+  
+}
+.menu a{
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.links{
+  color: #fff;
+  margin: auto;
+  width: 10px;
+  margin-left: 500px;
+  cursor: pointer;
+}
