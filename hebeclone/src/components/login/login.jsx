@@ -4,8 +4,11 @@ import {Link} from "react-router-dom"
 import { useDispatch, useSelector } from 'react-redux'
 import axios from 'axios'
 import { Signin } from '../../actions/userActions'
+import {useNavigate} from "react-router-dom"
+
 
 export default function Login() {
+  let navigate=useNavigate();
   
     const [password,setPassword]=useState("")
     const [email,setEmail]=useState("")
@@ -15,7 +18,7 @@ export default function Login() {
     const  handleSubmit=async()=>{
     dispatch(Signin({email,password}))
     
-     
+     navigate("/cart")
 
     }
   return (

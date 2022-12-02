@@ -27,6 +27,29 @@
       "email": "titu@gmail.com",
       "password": "titu",
       "id": 4
+    },
+    {
+      "firstName": "mohit ",
+      "lastName": "titu",
+      "email": "mkibap",
+      "password": "titu",
+      "id": 5
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqn61B2X-JCWlOSTdTiJw_jxhRUUxl5mLaPRgQDhOyQ&s",
+      "price": 250,
+      "name": "shampoo",
+      "quantity": 60
+    },
+    {
+      "id": 2,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBqn61B2X-JCWlOSTdTiJw_jxhRUUxl5mLaPRgQDhOyQ&s",
+      "price": 300,
+      "name": "hair",
+      "quantity": 5
     }
   ]
 }
