@@ -5,7 +5,7 @@ import {
     DrawerHeader,
     DrawerOverlay,
     DrawerContent,
-    DrawerCloseButton,useDisclosure,Button, Container, Box,Image,Text
+    DrawerCloseButton,useDisclosure,Button, Container, Box,Image,Text,Heading,Card,CardBody,Stack,CardFooter
   } from '@chakra-ui/react'
   import React  from "react"
   import { useEffect } from 'react'
@@ -51,10 +51,37 @@ import { getcart, HandleQuantiy } from '../../actions/cartAction'
             <DrawerBody>
              <Container>
                { cart.map((el)=>{
-                   return(  <Box><Image src={el.image}/><Text>{el.name}</Text>
-                   <Text>{el.price}</Text>
-                     
-                     </Box>   )   
+                   return(<Card
+                    direction={{ base: 'column', sm: 'row' }}
+                    overflow='hidden'
+                    variant='outline'
+                   padding="20px"
+                   marginBottom="20px"
+                   size="sm">
+                    <Image
+                      objectFit='cover'
+                      maxW={{ base: '100%', sm: '200px' }}
+                      src={el.image}
+                      alt='Caffe Latte'
+                    />
+                  
+                    <Stack>
+                      <CardBody>
+                        <Heading size='md'>{el.name}</Heading>
+                  
+                        <Text py='2'>
+                      {el.quantity}
+                        </Text>
+                      </CardBody>
+                  
+                      <CardFooter>
+                        <Button variant='solid' colorScheme='blue'>
+                          {el.price}
+                        </Button>
+                        <Button>"Remove Item"</Button>
+                      </CardFooter>
+                    </Stack>
+                  </Card> )   
                 })}
              </Container>
             </DrawerBody>
