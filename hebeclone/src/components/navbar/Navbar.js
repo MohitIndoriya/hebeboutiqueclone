@@ -1,27 +1,62 @@
-import React,{useState} from 'react';
-import { AppBar, Grid, Tabs, Tab, Toolbar,Button,Drawer } from "@mui/material";
+import React from 'react';
+import "./Navbar.css";
+import TypewriterComponent from "typewriter-effect";
 import PersonIcon from '@mui/icons-material/Person';
 import SearchSharpIcon from '@mui/icons-material/SearchSharp';
 import ShoppingBagSharpIcon from '@mui/icons-material/ShoppingBagSharp';
-import TypewriterComponent from "typewriter-effect";
-import "./Navbar.css"
+import { Icon } from '@chakra-ui/react';
+import {
+  Drawer,
+  DrawerBody,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  Button,Input,useDisclosure
+} from '@chakra-ui/react'
 
- 
-const Navbar = ({links}) => {
-    const [value, setValue] = useState();
+const Navbar1 = () => {
+
+  function DrawerExample() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+  
     return (
-      <div>
-            <div style={{textAlign:"center",color:"#CAAFA8",padding:"5px",height:"20px",fontSize:"16px",
-            letterSpacing: "2px",
-    fontSize: "11px",fontFamily:"Montserrat" }}>
-               $6 EXPRESS COURIER. FREE SHIPPING FOR ORDERS $200+. GIFTED HEBE TOTE BAG WITH PURCHASES $250+.
-            </div>
-      <AppBar sx={{background:"#CAAFA8",marginTop:"28px",height:"80px"}}>
-         
-      <Toolbar >
-        <Grid sx={{placeItems:"center"}} container >
-          <Grid item xs={3}>
-                            <div style={{ fontSize:"50px"}}>
+      <>
+        <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
+          Open
+        </Button>
+        <Drawer
+          isOpen={isOpen}
+          placement='right'
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton />
+            <DrawerHeader>Create your account</DrawerHeader>
+  
+            <DrawerBody>
+              <Input placeholder='Type here...' />
+            </DrawerBody>
+  
+            <DrawerFooter>
+              <Button variant='outline' mr={3} onClick={onClose}>
+                Cancel
+              </Button>
+              <Button colorScheme='blue'>Save</Button>
+            </DrawerFooter>
+          </DrawerContent>
+        </Drawer>
+      </>
+    )
+  }
+
+  return (
+    <div className="parent">
+<div style={{ fontSize:"50px",marginLeft:"30px",color:"#fff",width:"10%",cursor:"pointer"}}>
                             <TypewriterComponent
                                 options={{
                                     strings: ["hebe."],
@@ -31,62 +66,22 @@ const Navbar = ({links}) => {
                                     fontSize: '200px'
                                 }}
                             />  
-                          </div>
-                              
-            
-          </Grid>
-                  <Grid item xs={8}>
-                  <div class="navbar">
-  
-  <div class="dropdown">
-    
-  <a href="#home" class="dropbtn">SHOP</a>
-    <a href="#news" >BRANDS</a>
-    <a href="#home" >MY BOYFRIENDS BACK</a>
-  <a href="#news" >STAFF EDIT</a>
-    <div class="dropdown-content">
-         
-      <div class="row">
-        <div class="column">
-          <h3>BY STYLE</h3>
-          <a href="#">Activewear</a>
-          <a href="#">Bags</a>
-          <a href="#">Belts</a>
-        </div>
-        <div class="column">
-          <h3>-</h3>
-          <a href="#">Jewellery</a>
-          <a href="#">Pants</a>
-          <a href="#">Shirts</a>
-        </div>
-        <div class="column">
-          <h3>OUR STORE</h3>
-          <a href="#">Hebe Homegrown</a>
-          <a href="#">Meet The Girls</a>
-          <a href="#">Careers</a>
-        </div>
+      </div>
+      <div className='menu'>
+        
+        <div><a href="#">SHOP</a></div>
+        <div><a href="#">BRANDS</a></div>
+        <div><a href="#">MY BOYFRIENDS BACK</a></div>
+        <div><a href="#">STAFF EDIT</a></div>
+        
+      </div>
+      <div className='links'>
+        <Icon as={PersonIcon} />
+        <Icon as={SearchSharpIcon} />
+        <Icon onClick={DrawerExample} as={ShoppingBagSharpIcon} />
       </div>
     </div>
-  </div> 
-</div>
-
-                            
-                        </Grid>
-                    
-                        <Grid item xs={1} sx={{display:"flex"}}>
-                           
-                                <PersonIcon sx={{marginRight:"20px"}} />
-                                <SearchSharpIcon sx={{marginRight:"20px"}} />
-                                <ShoppingBagSharpIcon sx={{ marginRight: "20px" }} />
-                               
-                                
-                          
-                        </Grid>
-        </Grid>
-      </Toolbar>
-    </AppBar>
-                            </div>
-  );
+  )
 }
 
-export default Navbar
+export default Navbar1
