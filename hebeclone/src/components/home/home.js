@@ -1,5 +1,13 @@
 import React, {useEffect} from 'react';
 import './home.css';
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+ import "swiper/css";
+ import "swiper/css/pagination";
+ import { Pagination } from "swiper";
+
+// import "./styles.css";
 
 function Home(){
     function App1() {
@@ -24,6 +32,89 @@ function Home(){
             <div className='slider-section'>
                 <h1>Must Haves</h1>
                 <p>Some of our favourite picks this week.</p>
+
+                <Swiper id="sip"
+                    slidesPerView={4}
+                    spaceBetween={30}
+                    pagination={{
+                    clickable: true,
+                    }}
+                    
+                    className="mySwiper"
+                >
+                    <SwiperSlide >
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_388e02d0-c9b5-4bd3-9849-1a791c6c31e8_750x.jpg?v=1668728366"/>
+                            <h4>Cali Midi Dress // Ice Blue Zebra</h4>
+                            <p>CHARLIE HOLIDAY</p>
+                            <h5>$139.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/4C8FF75C-F42C-4E46-BEE8-8376F3469683_750x.jpg?v=1667606083"/>
+                            <h4>Casia Shoulder Bag // Black</h4>
+                            <p>SABEN</p>
+                            <h5>$389.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_472d7bd1-5488-4674-b83f-6c196ab91a2d_750x.jpg?v=1667195057"/>
+                            <h4>Cassie Top // Seaside Floral</h4>
+                            <p>REMAIN</p>
+                            <h5>$182.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/7ECEB353-4A54-4199-A900-CCFC9DB76636_750x.jpg?v=1669692257"/>
+                            <h4>Classic Linen Shirt // Natural</h4>
+                            <p>COMMONERS ALIKE</p>
+                            <h5>$149.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/621A9514-DB1E-4DEF-BC3E-6F1AB0CEEBBD_750x.webp?v=1664327754"/>
+                            <h4>Classic Tee // White</h4>
+                            <p>KOWTOW</p>
+                            <h5>$79.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_f33d681e-872a-492b-a42f-1a57e1a6398e_750x.webp?v=1669602207"/>
+                            <h4>Coco Mini Bag // Black Crystal</h4>
+                            <p>SABEN</p>
+                            <h5>$399.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_acafe6ec-6caf-4b7e-9be4-6d04b30005a0_750x.jpg?v=1667347992"/>
+                            <h4>Composure Cardi // Black</h4>
+                            <p>KOWTOW</p>
+                            <h5>$249.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/image_e1b8a394-2ec0-4e1b-a484-75f44d192b5a_750x.jpg?v=1669795277"/>
+                            <h4>Darling Blouse // White</h4>
+                            <p>CAITLIN CRISP</p>
+                            <h5>$365.00</h5>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div>
+                            <img src="https://cdn.shopify.com/s/files/1/1132/3440/products/910F499E-8117-4B5E-8E72-AEBCF35BF08A_750x.jpg?v=1668200645"/>
+                            <h4>Florence Dress // Blue Stripe</h4>
+                            <p>KOWTOW</p>
+                            <h5>$289.00</h5>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
             </div>
             <div className='video-section'>
                 <video width="100%" height="auto" autoPlay muted loop>
