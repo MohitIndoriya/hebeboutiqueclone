@@ -1,30 +1,20 @@
-// import logo from './logo.svg';
-import "./App.css";
 import Product from "./components/Product Page/Product";
-// import { ChakraProvider } from "@chakra-ui/react";
-// import { ChakraProvider } from "@chakra-ui/react";
-
+import { useContext } from "react";
+import ProductContext from "./components/ProductContextAPI/ProductContextAPI";
+// import HoverCart from "./components/HoverCart/HoverCart";
+import { ChakraProvider } from "@chakra-ui/react";
 function App() {
+  const data = useContext(ProductContext);
   return (
-    <div className="App">
-      {/* <ChakraProvider> */}
-      <Product />
-      {/* </ChakraProvider> */}
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
+    <ChakraProvider>
+      <div className="App">
+        {" "}
+        <ProductContext.Provider value={data}>
+          <Product />
+        </ProductContext.Provider>
+        {/* <HoverCart /> */}
+      </div>
+    </ChakraProvider>
   );
 }
 
