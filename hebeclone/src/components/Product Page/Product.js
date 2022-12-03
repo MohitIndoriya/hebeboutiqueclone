@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import "./Product.css";
-import productContext from "../ProductContextAPI/ProductContextAPI";
+import ProductContext from "../ProductContextAPI/ProductContextAPI";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 import { Button, useDisclosure } from "@chakra-ui/react";
 import {
@@ -11,6 +11,7 @@ import {
   DrawerContent,
   DrawerCloseButton,
 } from "@chakra-ui/react";
+import SliderProducts from "../SliderProducts/SliderProducts";
 
 export default function Product() {
   let productArray = [
@@ -71,8 +72,7 @@ export default function Product() {
       },
     },
   ];
-
-  let data = useContext(productContext);
+  let data = useContext(ProductContext);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
@@ -310,7 +310,7 @@ export default function Product() {
       </div>
       <div id="bottom">
         <div id="topBottom">You may also like</div>
-        <div id="downBottom">downBottom</div>
+        <SliderProducts />
       </div>
     </div>
   );

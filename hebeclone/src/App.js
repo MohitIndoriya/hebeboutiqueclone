@@ -1,10 +1,10 @@
 import Product from "./components/Product Page/Product";
-import { useContext } from "react";
+import react from "react";
 import ProductContext from "./components/ProductContextAPI/ProductContextAPI";
-// import HoverCart from "./components/HoverCart/HoverCart";
+// import SliderProducts from "./components/SliderProducts/SliderProducts";
 import { ChakraProvider } from "@chakra-ui/react";
 function App() {
-  const data = useContext(ProductContext);
+  const data = react.useContext(ProductContext);
   return (
     <ChakraProvider>
       <div className="App">
@@ -12,7 +12,7 @@ function App() {
         <ProductContext.Provider value={data}>
           <Product />
         </ProductContext.Provider>
-        {/* <HoverCart /> */}
+        {/* <SliderProducts /> */}
       </div>
     </ChakraProvider>
   );
