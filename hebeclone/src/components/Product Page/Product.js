@@ -9,7 +9,6 @@ import {
   DrawerFooter,
   DrawerOverlay,
   DrawerContent,
-  DrawerCloseButton,
 } from "@chakra-ui/react";
 import SliderProducts from "../SliderProducts/SliderProducts";
 
@@ -72,6 +71,7 @@ export default function Product() {
       },
     },
   ];
+  let totalPrice = 0;
   let data = useContext(ProductContext);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -118,24 +118,23 @@ export default function Product() {
           <div style={{ fontSize: "18px" }}>{data.rating.count} in Stock</div>
           <div>
             <p>Size</p>
-            <button>S</button>
-            <button>M</button>
-            <button>L</button>
+            <Tabs variant="solid-rounded" colorScheme="green">
+              <TabList>
+                <Tab>S</Tab>
+                <Tab>M</Tab>
+                <Tab>L</Tab>
+              </TabList>
+            </Tabs>
           </div>
           <button ref={btnRef} onClick={onOpen} id="addToCart">
             Add to cart
           </button>
-          <Drawer
-            isOpen={isOpen}
-            placement="right"
-            onClose={onClose}
-            finalFocusRef={btnRef}
-          >
+          <Drawer onClose={onClose} isOpen={isOpen}>
             <DrawerOverlay />
             <DrawerContent>
-              <DrawerCloseButton />
               <DrawerBody>
                 {productArray.map((el, index) => {
+                  totalPrice = totalPrice + el.price;
                   return (
                     <div
                       style={{
@@ -152,18 +151,27 @@ export default function Product() {
                       />
                       <div>
                         <p>{el.title}</p>
-                        <p>{el.price}</p>
+                        <p>$ {el.price}</p>
                       </div>
                     </div>
                   );
                 })}
+                <div
+                  style={{
+                    marginTop: "30px",
+                    display: "flex",
+                    justifyContent: "space-between",
+                  }}
+                >
+                  <p>Subtotal</p>
+                  <p>$ {totalPrice}</p>
+                </div>
               </DrawerBody>
 
               <DrawerFooter>
-                <Button variant="outline" mr={3} onClick={onClose}>
-                  Cancel
+                <Button colorScheme="blue" onClick={onClose}>
+                  CheckOut
                 </Button>
-                <Button colorScheme="blue">Save</Button>
               </DrawerFooter>
             </DrawerContent>
           </Drawer>
