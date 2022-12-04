@@ -6,6 +6,7 @@ import AllRoutes from './components/Routes/allRoutes';
 import Navbar1 from './components/navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
+
 function App() {
   return (
     <div className="App" style={{width:"100%",height:"80%"}}>
