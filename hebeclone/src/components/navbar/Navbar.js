@@ -16,6 +16,7 @@ import {
   Button,Input,useDisclosure
 } from '@chakra-ui/react'
 import { Cart } from '../cart/cart';
+import { Link } from 'react-router-dom';
 
 const Navbar1 = () => {
 
@@ -58,7 +59,7 @@ const Navbar1 = () => {
   return (
     <div className="parent">
 <div style={{ fontSize:"50px",marginLeft:"30px",color:"#fff",width:"10%",cursor:"pointer"}}>
-                            <TypewriterComponent
+                           <Link to="/"> <TypewriterComponent
                                 options={{
                                     strings: ["hebe."],
                                     loop: true,
@@ -66,7 +67,7 @@ const Navbar1 = () => {
                                     typeSpeed:10,
                                     fontSize: '200px'
                                 }}
-                            />  
+                            />  </Link>
       </div>
       <div className='menu'>
         
@@ -77,7 +78,7 @@ const Navbar1 = () => {
         
       </div>
       <div className='links'>
-        <Icon as={PersonIcon} />
+       <Link to="/Login"> <Icon as={PersonIcon} /></Link>
         <Icon as={SearchSharpIcon} />
        <Cart />
       </div>
