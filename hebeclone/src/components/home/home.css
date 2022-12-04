@@ -193,3 +193,14 @@ p{
     width: 100%;
     overflow-x: scroll;
   }
+
+
+  .content{
+    display: none;
+  }
+  .active-content{
+    display: block;
+  }
+  .active-tab{
+    color:red;
+  }
