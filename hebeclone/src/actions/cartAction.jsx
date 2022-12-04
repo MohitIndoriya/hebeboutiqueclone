@@ -28,3 +28,29 @@ export const HandleQuantiy=({id,quantity})=>async (dispatch)=>{
 
     }
 }
+export const removedata=(id)=>async(dispatch)=>{
+    try {
+        let cart1=await axios.delete(`http://localhost:8080/cart/${id}`)
+        let arr2=await axios.get("http://localhost:8080/cart")
+        return dispatch({
+            type:"GETCART",
+            payload:arr2.data
+        })
+    } catch (error) {
+        
+    }
+}
+export const addtocart=(id)=>async(dispatch)=>{
+    try {
+        let item =await axios.get(`http://localhost:8080/products/${id}`)
+        console.log(item.data,"o hu m")
+        await axios.post("http://localhost:8080/cart",item.data)
+        let arr3=await axios.get("http://localhost:8080/cart")
+        return dispatch({
+            type:"GETCART",
+            payload:arr3.data
+        })
+    } catch (error) {
+        console.log(error)
+    }
+}

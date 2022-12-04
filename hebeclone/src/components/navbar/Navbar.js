@@ -15,6 +15,7 @@ import {
   DrawerCloseButton,
   Button,Input,useDisclosure
 } from '@chakra-ui/react'
+import { Cart } from '../cart/cart';
 
 const Navbar1 = () => {
 
@@ -78,7 +79,7 @@ const Navbar1 = () => {
       <div className='links'>
         <Icon as={PersonIcon} />
         <Icon as={SearchSharpIcon} />
-        <Icon onClick={DrawerExample} as={ShoppingBagSharpIcon} />
+       <Cart />
       </div>
     </div>
   )
