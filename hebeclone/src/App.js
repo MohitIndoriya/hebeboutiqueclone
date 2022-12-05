@@ -5,6 +5,7 @@ import Signup from './components/login/Signup';
 import AllRoutes from './components/Routes/allRoutes';
 import Navbar1 from './components/navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Productpage from './components/productpages/Productpage';
 
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
      
      <AllRoutes/>
      <Footer/>
-     
+     <Productpage/>
     </div>
   );
 }
