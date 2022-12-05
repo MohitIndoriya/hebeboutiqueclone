@@ -17,10 +17,10 @@ export default function Login() {
     const dispatch=useDispatch()
     const  handleSubmit=async()=>{
     dispatch(Signin({email,password}))
-    
-     navigate("/cart")
-
+    isAuth?navigate("/cart"):alert("wrong credential ")
     }
+
+    
   return (
     <Box bg="#caafa8">
     <Container>

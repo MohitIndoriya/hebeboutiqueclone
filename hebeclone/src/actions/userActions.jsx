@@ -1,14 +1,19 @@
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
+
 export const Signin=(creds)=>async (dispatch)=>{
+    
     dispatch({type:"LODING"})
     try{
         let res=await axios.get(`http://localhost:8080/users?email=${creds.email}&password=${creds.password}`)
         if(res.data.length>0){
-            alert("Login Succesfull")
+           
             return dispatch({type:"LOGIN",paylode:res.data[0].firstName})
+            alert("Login Succesfull")
+           
           
-        }else{
-            alert("user not exist")
+       
+          
         }
     }catch(e){
         console.log(e.message)
