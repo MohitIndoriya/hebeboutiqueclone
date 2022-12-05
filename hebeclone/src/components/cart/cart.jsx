@@ -15,6 +15,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { addtocart, getcart, HandleQuantiy, removedata } from '../../actions/cartAction'
 import { display, height, padding } from '@mui/system'
+import { Link } from 'react-router-dom'
 export function Cart() {
   const [size, setSize] = React.useState('')
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -81,7 +82,7 @@ export function Cart() {
                     <p>{`$ ${el.price}`}</p>
                   </div>
                   <div style={{ marginLeft: "70px"  }}>
-                    <div style={{ display: "flex", alignItems:"center", hight: "200px" }}>   <p>{el.quantity}</p> <div style={{ display: "flex" ,flexDirection:"column" }}><Button onClick={()=>{
+                    <div style={{ display: "flex", alignItems:"center", hight: "200px" }}>   <p style={{marginBottom:"50px"}}>{el.quantity}</p> <div style={{ display: "flex" ,flexDirection:"column" }}><Button onClick={()=>{
                        dispatch(HandleQuantiy({id:el.id,quantity:el.quantity+1}))
                     }} size="xs" colorScheme='teal' variant='ghost' width={1}><Icon as={ChevronUpIcon} /></Button>
 
@@ -99,8 +100,11 @@ export function Cart() {
                 </div>)
 
               })}
-            </Container>
-            <div>{total}</div>
+            </Container><div style={{display:"flex",flexDirection:"row" ,justifyContent:"space-between"}}>
+            <div style={{fontSize:"30px"}}>SubTotal </div>
+            <div style={{fontSize:"30px"}} >$ {total}</div></div>
+            <p style={{marginLeft:"50px",fontSize:"12px" ,color:"grey", marginTop:"50px"}} >Shipping, taxes, and discount codes calculated at checkout.</p>
+           <Box alignItems="center" marginTop={50} marginLeft={200} fontSize="20px" color="#caafa8"> <Link >Checkout</Link></Box>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

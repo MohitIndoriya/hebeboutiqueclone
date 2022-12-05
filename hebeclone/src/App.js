@@ -6,6 +6,8 @@ import AllRoutes from './components/Routes/allRoutes';
 import Navbar1 from './components/navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Productpage from './components/productpages/Productpage';
+import Checkout from './components/Checkout/Checkout';
+
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
      <AllRoutes/>
      <Footer/>
      <Productpage/>
+     
+    
     </div>
   );
 }
