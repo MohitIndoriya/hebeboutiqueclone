@@ -7,6 +7,7 @@ import { Cart } from "../cart/cart"
 import Checkout from "../pages/Checkout"
 
 import Home from "../home/home"
+import Productpage from "../productpages/Productpage"
 
 
 
@@ -21,6 +22,7 @@ export default function AllRoutes() {
       <Route path="/checkout" element={<Checkout/>}/>
 
         <Route path="/Login" element={<Login/>}/>
+        <Route path="/products/:category" element={<Productpage/>}/>
        
         <Route path="/" element={<Home/>}/>
 

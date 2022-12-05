@@ -17,10 +17,12 @@ import {
   Button,Input,useDisclosure
 } from '@chakra-ui/react'
 import { Cart } from '../cart/cart';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+
+
 
 const Navbar1 = () => {
-
+ 
   function DrawerExample() {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const btnRef = React.useRef()
@@ -91,15 +93,16 @@ const Navbar1 = () => {
         <div className="row">
           <div className="column">
             <h3>BY STYLE</h3>
-            <a href="#">Activewear</a>
-           <Link to="/dresses">dresses</Link>
+           
+           <Link to="/products/sweatshirts">Sweat Shirts</Link>
+           <Link to="/products/jackets">Jackets</Link>
             <a href="#">Belts</a>
           </div>
           <div className="column">
             <h3>-</h3>
-            <Link to="/jewellery">jewellery</Link>
-            <a href="#">Pants</a>
-            <Link to="/shirts">Shirts</Link>
+            <Link to="/products/jewelery">jewelery</Link>
+            <Link to="/products/sunglasses">Sun glasses</Link>
+            <Link to="/products/skirts">Skirts</Link>
           </div>
           <div className="column">
             <h3>OUR STORE</h3>

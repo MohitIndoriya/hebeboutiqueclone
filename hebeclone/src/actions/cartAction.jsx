@@ -50,6 +50,7 @@ export const addtocart=(id)=>async(dispatch)=>{
             type:"GETCART",
             payload:arr3.data
         })
+        alert("product added to cart")
     } catch (error) {
         console.log(error)
     }
