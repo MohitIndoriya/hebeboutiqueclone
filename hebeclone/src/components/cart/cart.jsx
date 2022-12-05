@@ -23,7 +23,7 @@ export function Cart() {
   let { cart, total } = useSelector((store) => store.cart)
   useEffect(() => {
     dispatch(getcart())
-    dispatch(addtocart(2))
+   
     console.log(cart, total, "store")
   }, [])
   console.log(cart, total, "store")
@@ -32,10 +32,7 @@ export function Cart() {
     setSize(newSize)
     onOpen()
   }
-  function fun() {
-    dispatch(HandleQuantiy({ id: 2, quantity: 5 }))
-
-  }
+  
   function removefromcart(id){
  dispatch(removedata(id))
   }
@@ -53,7 +50,8 @@ export function Cart() {
           type="unstyled"
          variant="link"
           bg="#caafa8"
-        >{<Icon bg="#caafa8" color="white" borderColor="#caafa8" as={ShoppingBagSharpIcon} />}</Button>
+          paddingBottom="5px"
+        >{<Icon bg="#caafa8" color="white" borderColor="#caafa8" as={ShoppingBagSharpIcon}  />}</Button>
       ))}
 
       <Drawer onClose={onClose} isOpen={isOpen} size={size}>

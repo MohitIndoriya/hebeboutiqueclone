@@ -3,10 +3,15 @@ import axios from "axios"
 import React from 'react'
 import { useState } from "react"
 import { useEffect } from "react"
+import { useDispatch } from "react-redux"
+import { useParams } from "react-router-dom"
+import { addtocart } from "../../actions/cartAction"
 
 export default function Productpage() {
     let [arr,setarr]=useState([])
-    let category="jackets"
+    let {category}=useParams()
+    let dispatch=useDispatch()
+  
     const data=async()=>{
        
        
@@ -17,7 +22,8 @@ export default function Productpage() {
     }
 useEffect(()=>{
     data()
-},[])
+    
+},[category])
 console.log(arr);
    
    
@@ -46,7 +52,7 @@ console.log(arr);
             <CardFooter justifyContent="center">
               <ButtonGroup spacing='2'>
                
-                <Button variant='ghost' colorScheme='blue'>
+                <Button variant='ghost' colorScheme='blue' onClick={()=>dispatch(addtocart(e.id))}>
                   Add to cart
                 </Button>
               </ButtonGroup>
