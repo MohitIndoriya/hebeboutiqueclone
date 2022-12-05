@@ -9,6 +9,7 @@ import Productpage from './components/productpages/Productpage';
 
 
 function App() {
+  const data = react.useContext(ProductContext);
   return (
     <div className="App" style={{width:"100%",height:"80%"}}>
       <Navbar1/>
