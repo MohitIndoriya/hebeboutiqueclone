@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link } from "react-router-dom"
 import "./Navbar.css";
 import TypewriterComponent from "typewriter-effect";
 import PersonIcon from '@mui/icons-material/Person';
@@ -54,26 +55,56 @@ const Navbar1 = () => {
     )
   }
 
+  
+
   return (
     <div className="parent">
 <div style={{ fontSize:"50px",marginLeft:"30px",color:"#fff",width:"10%",cursor:"pointer"}}>
-                            <TypewriterComponent
+        <Link to="/">
+        <TypewriterComponent
                                 options={{
-                                    strings: ["hebe."],
-                                    loop: true,
-                                    autoStart: true,
-                                    typeSpeed:10,
-                                    fontSize: '200px'
+                                  strings: ["hebe."],
+                                  loop: true,
+                                  autoStart: true,
+                                  typeSpeed:10,
+                                  fontSize: '200px'
                                 }}
-                            />  
+                                />  
+                                </Link>                    
       </div>
-      <div className='menu'>
+      <div className='navbar'>
         
+     
+        <div className="dropdown">
+    
         <div><a href="#">SHOP</a></div>
         <div><a href="#">BRANDS</a></div>
         <div><a href="#">MY BOYFRIENDS BACK</a></div>
         <div><a href="#">STAFF EDIT</a></div>
-        
+      <div className="dropdown-content">
+           
+        <div className="row">
+          <div className="column">
+            <h3>BY STYLE</h3>
+            <a href="#">Activewear</a>
+           <Link to="/dresses">dresses</Link>
+            <a href="#">Belts</a>
+          </div>
+          <div className="column">
+            <h3>-</h3>
+            <Link to="/jewellery">jewellery</Link>
+            <a href="#">Pants</a>
+            <Link to="/shirts">Shirts</Link>
+          </div>
+          <div className="column">
+            <h3>OUR STORE</h3>
+            <a href="#">Hebe Homegrown</a>
+            <a href="#">Meet The Girls</a>
+            <a href="#">Careers</a>
+          </div>
+        </div>
+      </div>
+    </div> 
       </div>
       <div className='links'>
         <Icon as={PersonIcon} />
