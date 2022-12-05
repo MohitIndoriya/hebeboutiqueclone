@@ -1,10 +1,11 @@
 import React from 'react';
 import "./Footer.css";
-import Input from '@mui/material/Input';
+import {Container, Input} from "@chakra-ui/react";
 
 
 export default function Footer() {
   return (
+    
       <div className='footer'>
           <h2>Join us</h2>
           <p className='para'>We will let you know when we have new arrivals, events and promo's
@@ -32,5 +33,6 @@ export default function Footer() {
       </div>
       <p className='last'>© 2022 Hebe Designer Boutique</p>
      </div>
+    
   )
 }
