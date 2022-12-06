@@ -38,7 +38,7 @@ export default function Product() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   return (
-    <div className="container productbody">
+    <div className="container">
       <div id="top">
         <div id="topLeft">
           {
