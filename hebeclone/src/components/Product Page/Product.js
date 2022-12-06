@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Product.css";
 import ProductContext from "../ProductContextAPI/ProductContextAPI";
 import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
@@ -11,78 +11,39 @@ import {
   DrawerContent,
 } from "@chakra-ui/react";
 import SliderProducts from "../SliderProducts/SliderProducts";
+import axios from "axios";
+import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addtocart } from "../../actions/cartAction";
 
 export default function Product() {
-  let productArray = [
-    {
-      id: 1,
-      title: "Six Piece Band Ring",
-      price: 695,
-      description:
-        "From our Legends Collection, the Naga was inspired by the mythical water dragon that protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.",
-      category: "jewelery",
-      image:
-        "https://cdn.shopify.com/s/files/1/1132/3440/products/38A48FA9-3301-474E-B314-710628A4C6CC_750x.jpeg.jpg?v=1571709542",
-      rating: {
-        rate: 4.6,
-        count: 400,
-      },
-    },
-    {
-      id: 2,
-      title: "Snake Band Skinny",
-      price: 168,
-      description:
-        "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
-      category: "jewelery",
-      image:
-        "https://cdn.shopify.com/s/files/1/1132/3440/products/B78CA27C-1144-49BA-8554-4592FD2ECB81_750x.jpeg.jpg?v=1571709542",
-      rating: {
-        rate: 3.9,
-        count: 70,
-      },
-    },
-    {
-      id: 3,
-      title: "Dusted Heart Shield Ring",
-      price: 9.99,
-      description:
-        "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
-      category: "jewelery",
-      image:
-        "https://cdn.shopify.com/s/files/1/1132/3440/products/61064061-3E99-4C63-962C-C8DE87B05DCE_750x.jpg?v=1639440995",
-      rating: {
-        rate: 3,
-        count: 400,
-      },
-    },
-    {
-      id: 4,
-      title: "Flashy Necklace // Sterling Silver",
-      price: 10.99,
-      description:
-        "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
-      category: "jewelery",
-      image:
-        "https://cdn.shopify.com/s/files/1/1132/3440/products/image_aafe4a0e-9784-499f-a660-bd59cf296ebb_750x.jpg?v=1571709519",
-      rating: {
-        rate: 1.9,
-        count: 100,
-      },
-    },
-  ];
-  let totalPrice = 0;
-  let data = useContext(ProductContext);
+  let dispatch=useDispatch()
+  let {id}=useParams()
+  let [productArray,setproduct]=useState([{}])
+  const data1=async()=>{
+       
+       
+    let  products=await axios.get(`http://localhost:8080/products/${id}`)
+    
+  setproduct([products.data])
+    
+ }
+ useEffect(()=>{
+  data1()
+ },[])
+ console.log(productArray[0],"ye m hu");
 
+  let totalPrice = 0;
+ 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   return (
-    <div className="container">
+    <div className="container productbody">
       <div id="top">
         <div id="topLeft">
           {
             <img
-              src={data.image}
+              src={productArray[0].image}
               alt="pic"
               height="750"
               width="540"
@@ -91,10 +52,10 @@ export default function Product() {
           }
         </div>
         <div id="topRight">
-          <div>{data.category}</div>
-          <h1>{data.title}</h1>
+          <div>{productArray[0].category}</div>
+          <h1>{productArray[0].title}</h1>
           <div>
-            <div style={{}}>$ {data.price + "  "}</div>
+            <div style={{}}>$ {productArray[0].price + "  "}</div>
             <div style={{ fontSize: "15px", display: "flex" }}>
               <span>
                 or 6 weekly interest-free payments from $13.32 with Laybuy
@@ -106,8 +67,8 @@ export default function Product() {
             </div>
           </div>
           <div style={{ fontSize: "15px", display: "flex" }}>
-            or ${data.rating.rate} interest-free payment of $ $
-            {data.rating.count % 7}` with
+            or ${} interest-free payment of $ $
+            { }` with
             <img
               style={{ height: "20px", width: "50px", marginLeft: "10px" }}
               src="https://mma.prnewswire.com/media/1224081/Afterpay_Mint_Logo.jpg?p=twitter"
@@ -115,7 +76,7 @@ export default function Product() {
             />
           </div>
           <div style={{ fontSize: "17px" }}>Tax Included</div>
-          <div style={{ fontSize: "18px" }}>{data.rating.count} in Stock</div>
+          <div style={{ fontSize: "18px" }}>{} in Stock</div>
           <div>
             <p>Size</p>
             <Tabs variant="solid-rounded" colorScheme="green">
@@ -126,55 +87,10 @@ export default function Product() {
               </TabList>
             </Tabs>
           </div>
-          <button ref={btnRef} onClick={onOpen} id="addToCart">
+          <button ref={btnRef} onClick={()=>dispatch(addtocart(id))} id="addToCart">
             Add to cart
           </button>
-          <Drawer onClose={onClose} isOpen={isOpen}>
-            <DrawerOverlay />
-            <DrawerContent>
-              <DrawerBody>
-                {productArray.map((el, index) => {
-                  totalPrice = totalPrice + el.price;
-                  return (
-                    <div
-                      style={{
-                        display: "flex",
-                        gap: "20px",
-                        marginBottom: "10px",
-                      }}
-                      key={index}
-                    >
-                      <img
-                        src={el.image}
-                        alt={index}
-                        style={{ height: "100px", width: "100px" }}
-                      />
-                      <div>
-                        <p>{el.title}</p>
-                        <p>$ {el.price}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-                <div
-                  style={{
-                    marginTop: "30px",
-                    display: "flex",
-                    justifyContent: "space-between",
-                  }}
-                >
-                  <p>Subtotal</p>
-                  <p>$ {totalPrice}</p>
-                </div>
-              </DrawerBody>
-
-              <DrawerFooter>
-                <Button colorScheme="blue" onClick={onClose}>
-                  CheckOut
-                </Button>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
+         
           <button id="buyBtn">
             Buy with{" "}
             <img
@@ -214,7 +130,7 @@ export default function Product() {
 
               <TabPanels>
                 <TabPanel>
-                  <p>{data.description}</p>
+                  <p>{productArray[0].desciption}</p>
                 </TabPanel>
                 <TabPanel>
                   <h3>CLICK & COLLECT</h3>

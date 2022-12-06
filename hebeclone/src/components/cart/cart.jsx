@@ -102,7 +102,7 @@ export function Cart() {
             <div style={{fontSize:"30px"}}>SubTotal </div>
             <div style={{fontSize:"30px"}} >$ {total}</div></div>
             <p style={{marginLeft:"50px",fontSize:"12px" ,color:"grey", marginTop:"50px"}} >Shipping, taxes, and discount codes calculated at checkout.</p>
-           <Box alignItems="center" marginTop={50} marginLeft={200} fontSize="20px" color="#caafa8"> <Link >Checkout</Link></Box>
+           <Box alignItems="center" marginTop={50} marginLeft={200} fontSize="20px" color="#caafa8"> <Link to="/checkout">Checkout</Link></Box>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

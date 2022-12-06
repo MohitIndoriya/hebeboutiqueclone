@@ -9,11 +9,10 @@ export const Signin=(creds)=>async (dispatch)=>{
         if(res.data.length>0){
            
             return dispatch({type:"LOGIN",paylode:res.data[0].firstName})
-            alert("Login Succesfull")
-           
+
           
-       
-          
+        }else{
+            alert("invaild creds")
         }
     }catch(e){
         console.log(e.message)

@@ -1,10 +1,12 @@
 *{
-    background-color: #caafa8;
-    color: #ffffff;
+    
     margin: 0px;
     padding: 0px;
 }
+
 .container{
+    background-color: #caafa8;
+    color: #ffffff;
     padding: 5px;
     margin: 80px auto;
 }

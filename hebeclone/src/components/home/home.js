@@ -265,7 +265,7 @@ function Home(props){
                     </div>
                 </div>
             </div>
-            <h2>Footer component</h2>
+         
 
         </div>
     )

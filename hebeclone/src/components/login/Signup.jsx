@@ -43,7 +43,7 @@ export default function Signup() {
             payload:"user registerd"
         })
                alert("user added")
-               navigate("/")
+               navigate("/login")
         
       }
        }catch(e){

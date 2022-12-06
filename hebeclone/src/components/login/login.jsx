@@ -17,9 +17,9 @@ export default function Login() {
     const dispatch=useDispatch()
     const  handleSubmit=async()=>{
     dispatch(Signin({email,password}))
-    isAuth?navigate("/cart"):alert("wrong credential ")
     }
-
+    isAuth&&alert("Login Succesfull")
+isAuth&&navigate("/")
     
   return (
     <Box bg="#caafa8">
