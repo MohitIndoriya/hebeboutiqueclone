@@ -4,7 +4,7 @@ import React from 'react'
 import { useState } from "react"
 import { useEffect } from "react"
 import { useDispatch } from "react-redux"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import { addtocart } from "../../actions/cartAction"
 
 export default function Productpage() {
@@ -33,11 +33,11 @@ console.log(arr);
         arr.map((e)=>{
             return <Card maxW='sm'>
             <CardBody>
-              <Image
+             <Link to ={`/product/${e.id}`}> <Image
                 src={e.image}
                 alt='Green double couch with wooden legs'
                 borderRadius='lg'
-              />
+              /></Link>
               <Stack mt='6' spacing='3'>
                 <Heading size='md'>{e.title}</Heading>
                 <Text>

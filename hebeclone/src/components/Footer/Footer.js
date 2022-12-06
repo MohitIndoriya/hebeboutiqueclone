@@ -5,7 +5,7 @@ import {Container, Input} from "@chakra-ui/react";
 
 export default function Footer() {
   return (
-    
+   
       <div className='footer'>
           <h2>Join us</h2>
           <p className='para'>We will let you know when we have new arrivals, events and promo's
