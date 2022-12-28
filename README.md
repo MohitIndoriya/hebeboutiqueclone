@@ -9,34 +9,49 @@ We have assigned our tasks equally in the team. For example, landing page was cr
 
 Features:
 Landing page:
-
-
+<br/>
+<img src="https://miro.medium.com/max/720/1*ciC58aTLnN9d8a8q8qL07Q.webp"/>
+<br/>
 The above page consists of navbar in which all the important links to our website is given.
 
-
+<br/>
+<img src="https://miro.medium.com/max/720/1*QUxrUkc7-G9PFeu1xuPy3A.webp"/>
+<br/>
 The above screenshot consists of the slider in which different categories of products links are there .
 
+<br/>
+<img src="https://miro.medium.com/max/720/1*5gyHlgabTIjbYBkE0p2kMA.webp"/>
+<br/>
 
 Product Category page:
 
 
+<br/>
+<img src="https://miro.medium.com/max/720/1*TwXLZDZvMUFa2LbpoPumAQ.webp"/>
+<br/>
 
 In product page, user can buy any of the items by adding it in the cart. User can also see the details of that particular product by clicking on particular product.
 
 Product Details Page:
-
+<br/>
+<img src="https://miro.medium.com/max/720/1*ZG1NKhUeJEUuaWTN5QjZuQ.webp"/>
+<br/>
 
 
 In these pages , user can view the details of the particular product, and select the size accordingly and then add to the cart.
 
 Cart page:
 
-
+<br/>
+<img src="https://miro.medium.com/max/720/1*CjeCOJ0DCzx-6z-aywgpRw.webp"/>
+<br/>
 
 In the Cart page, we have the list of the items that we added to the cart and can change the quantity here on , can increase or decrease the quantity, and price changes accordingly.
 
 Payment page:
-
+<br/>
+<img src="https://miro.medium.com/max/720/1*p7J_2gtUirpu9QvFYR1P2A.webp"/>
+<br/>
 
 
 In payment page, there are three options available for user. User can either choose cash on delivery, credit card or debit card option for payment and after filling all the correct details his payment will be done and he will be redirected to Landing page.
