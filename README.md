@@ -1,11 +1,11 @@
 Hebe Boutique Clone
-Hello everyone, this blog is all about my 3rd project in Masai School i.e. cloning of Hebe Boutique’s website. In this project, we were a team of 4members including myself, Mohit Kumar Indoriya,Saif Ali and Priyanka Chejera . We have completed this project in 5 days.
+Hello everyone, this blog is all about my 3rd project in Masai School i.e. cloning of Hebe Boutique’s website. In this project, we were a team of 4members including myself, Anuj Midha,Saif Ali and Priyanka Chejera . We have completed this project in 5 days.
 
 Technologies used:
 In making this project, we used Html, Css, advanced JavaScript, React, Redux, Context API, Chakra UI and local storage.
 
 Tasks Done:
-We have assigned our tasks equally in the team. For example, landing page was created by Priyanka Chejera. Login page,Cart page and Product page was created by Mohit Kumar Indoriya. Navbar, footer section and Checkout page was created by me and Product Details page was created by Saif Ali.
+We have assigned our tasks equally in the team. For example, landing page was created by Priyanka Chejera. Login page,Cart page and Product page was created by Mohit Kumar Indoriya. Navbar, footer section and Checkout page was created by Anuj Midha and Product Details page was created by Saif Ali.
 
 Features:
 Landing page:
