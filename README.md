@@ -1,4 +1,4 @@
-Hebe Boutique Clone
+# Hebe Boutique Clone
 Hello everyone, this blog is all about my 3rd project in Masai School i.e. cloning of Hebe Boutique’s website. In this project, we were a team of 4members including myself, Anuj Midha,Saif Ali and Priyanka Chejera . We have completed this project in 5 days.
 
 Technologies used:
